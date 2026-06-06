@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "question": "Quel pays a une frontière avec lui-même ?",
+    "reponses": ["L'Afrique du Sud", "Le Vatican", "Le Lesotho", "Saint-Marin"],
+    "bonne_reponse": 2
+  },
+  {
+    "id": 2,
+    "question": "Combien de cœurs a une pieuvre ?",
+    "reponses": ["1", "2", "3", "5"],
+    "bonne_reponse": 2
+  },
+  {
+    "id": 3,
+    "question": "Quel est le seul mammifère qui ne peut pas sauter ?",
+    "reponses": ["Le rhinocéros", "L'hippopotame", "L'éléphant", "Le morse"],
+    "bonne_reponse": 2
+  },
+  {
+    "id": 4,
+    "question": "À quelle vitesse pousse un ongle en moyenne ?",
+    "reponses": ["0,1 mm par jour", "0,3 mm par semaine", "3 mm par mois", "1 cm par mois"],
+    "bonne_reponse": 2
+  },
+  {
+    "id": 5,
+    "question": "Quelle est la durée de vie d'un globule rouge ?",
+    "reponses": ["7 jours", "30 jours", "120 jours", "1 an"],
+    "bonne_reponse": 2
+  },
+  {
+    "id": 6,
+    "question": "Quel animal dort debout et rêve en courant ?",
+    "reponses": ["Le cheval", "La girafe", "Le cheval de mer", "Le lapin"],
+    "bonne_reponse": 0
+  },
+  {
+    "id": 7,
+    "question": "Combien de fois par jour bat un cœur humain en moyenne ?",
+    "reponses": ["50 000", "100 000", "200 000", "500 000"],
+    "bonne_reponse": 1
+  }
+]

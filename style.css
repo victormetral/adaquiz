@@ -1,0 +1,8 @@
+/* ════════════════════════════════════════════
+   ADAQUIZ — style.css
+════════════════════════════════════════════ */
+
+/* La classe .cache masque un écran */
+.cache {
+  display: none;
+}
