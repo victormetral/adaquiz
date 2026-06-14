@@ -88,7 +88,8 @@ const afficher = (ecran) => {
   descriptionQuestion.textContent = question.description
 
   listeReponses.innerHTML = ""
-   question.answers.forEach((reponse, index) => {
+  boutonSuivant.classList.add("cache")
+  question.answers.forEach((reponse, index) => {
   const bouton = document.createElement("button")
 
   bouton.textContent = reponse
@@ -117,8 +118,15 @@ const afficher = (ecran) => {
 //   6. Afficher le bouton "Question suivante"
 
 const verifierReponse = (indexChoisi) => {
-  // Écris ton code ici
+  const question = questions[indexCourant]
+
+if (indexChoisi === question.correctAnswer) {
+  score++
+  console.log(score)
 }
+boutonSuivant.classList.remove("cache")
+}
+
 
 
 // ── TODO : afficherResultats ─────────────────
@@ -147,3 +155,8 @@ boutonCommencer.addEventListener("click", () => {
   afficher(ecranQuestion)
   afficherQuestion()
 })
+boutonSuivant.addEventListener("click", () => {
+  indexCourant++
+  afficherQuestion()
+})
+
