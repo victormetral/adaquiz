@@ -138,7 +138,15 @@ boutonSuivant.classList.remove("cache")
 //   3. Appeler afficher(ecranResultats) pour passer à l'écran résultats
 
 const afficherResultats = () => {
-  // Écris ton code ici
+  scoreFinal.textContent = `${score} / ${questions.length}`
+
+  if (score >= questions.length / 2) {
+    messageFinal.textContent = "Bravo !"
+  } else {
+    messageFinal.textContent = "Tu peux faire mieux."
+  }
+
+  afficher(ecranResultats)
 }
 
 
@@ -157,6 +165,11 @@ boutonCommencer.addEventListener("click", () => {
 })
 boutonSuivant.addEventListener("click", () => {
   indexCourant++
-  afficherQuestion()
+
+  if (indexCourant < questions.length) {
+    afficherQuestion()
+  } else {
+    afficherResultats()
+  }
 })
 
