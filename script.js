@@ -9,8 +9,23 @@
 // Ces lignes récupèrent les éléments HTML par leur id.
 // Tu n'as pas besoin de les modifier.
 
-const btnCommencer = document.getElementById('btn-commencer')
+
 //... Crée autant de constantes que d'éléments HTML à récupérer
+const ecranAccueil = document.getElementById("ecran-accueil")
+const ecranQuestion = document.getElementById("ecran-question")
+const ecranResultats = document.getElementById("ecran-resultats")
+
+const boutonCommencer = document.getElementById("bouton-commencer")
+const boutonSuivant = document.getElementById("bouton-suivant")
+const boutonRejouer = document.getElementById("bouton-rejouer")
+
+const numeroQuestion = document.getElementById("numero-question")
+const titreQuestion = document.getElementById("titre-question")
+const descriptionQuestion = document.getElementById("description-question")
+const listeReponses = document.getElementById("liste-reponses")
+
+const scoreFinal = document.getElementById("score-final")
+const messageFinal = document.getElementById("message-final")
 
 
 // ── État du quiz ─────────────────────────────
@@ -29,10 +44,7 @@ let score = 0    // nombre de bonnes réponses
 fetch('questions.json')
   .then(response => response.json())
   .then(data => {
-    questions = data
-    titreQuiz.textContent = 'AdaQuiz'
-    descriptionQuiz.textContent = 'Ton quiz personnalisé'
-    nbQuestions.textContent = questions.length + ' questions'
+    questions = data.questions
   })
 
 
@@ -66,9 +78,30 @@ const afficher = (ecran) => {
 //   6. Vider #liste-reponses, puis créer un bouton pour chaque réponse
 //      Chaque bouton doit appeler verifierReponse() au clic
 
-const afficherQuestion = () => {
-  // Écris ton code ici
+
+  const afficherQuestion = () => {
+  const question = questions[indexCourant]
+
+  numeroQuestion.textContent = `Question ${indexCourant + 1} / ${questions.length}`
+
+  titreQuestion.textContent = question.title
+  descriptionQuestion.textContent = question.description
+
+  listeReponses.innerHTML = ""
+   question.answers.forEach((reponse, index) => {
+  const bouton = document.createElement("button")
+
+  bouton.textContent = reponse
+
+  bouton.addEventListener("click", () => {
+    verifierReponse(index)
+  })
+
+  listeReponses.appendChild(bouton)
+})
 }
+ 
+
 
 
 // ── TODO : verifierReponse ───────────────────
@@ -110,3 +143,7 @@ const afficherResultats = () => {
 //   - btn-rejouer   → remettre indexCourant et score à 0, revenir à l'accueil
 
 // Écris ton code ici
+boutonCommencer.addEventListener("click", () => {
+  afficher(ecranQuestion)
+  afficherQuestion()
+})
