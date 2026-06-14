@@ -14,7 +14,15 @@
        ÉCRAN 1 — ACCUEIL
        Affiché au départ. Caché quand on clique sur "Commencer".
   ════════════════════════════════════════ -->
+
   <section id="ecran-accueil" class="ecran">
+
+     <h1>Adaquiz</h1>
+
+     <p>Curiosités et culture du monde de la technologie</p>
+
+     <button id="bouton-commencer">Commencer
+     </button>
 
   </section>
 
@@ -22,7 +30,19 @@
        ÉCRAN 2 — QUESTION
        Caché au départ. Affiché pendant le quiz.
   ════════════════════════════════════════ -->
+
   <section id="ecran-question" class="ecran cache">
+     <p id="numero-question">Question 1 / 10</p>
+
+     <h2 id="titre-question">Titre de la question</h2>
+
+     <p id="description-question">Description de la question</p>
+
+     <div id="liste-reponses">
+          <!-- Les réponses seront ajoutées en JavaScript -->
+    </div>
+
+    <button id="bouton-suivant" class="cache">Question suivante</button>
 
   </section>
 
@@ -30,11 +50,21 @@
        ÉCRAN 3 — RÉSULTATS
        Caché au départ. Affiché à la fin du quiz.
   ════════════════════════════════════════ -->
+
   <section id="ecran-resultats" class="ecran cache">
+
+     <h2>Résultats</h2>
+
+     <p id="score-final">0 / 10</p>
+
+     <p id="message-final">Message de fin</p>
+
+     <button id="bouton-rejouer">Rejouer</button>
 
   </section>
 
   <script src="script.js" defer></script>
+  
 </body>
 
 </html>
