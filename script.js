@@ -48,6 +48,7 @@ fetch('questions.json')
   })
 
 
+
 // ── Navigation entre les écrans ──────────────
 // Cette fonction est déjà écrite.
 // Elle cache tous les écrans puis affiche celui qu'on lui donne.
