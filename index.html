@@ -47,14 +47,28 @@
        Caché au départ. Affiché pendant le quiz.
   ════════════════════════════════════════ -->
 
-      <section id="ecran-question" class="ecran cache"></section>
+     <section id="ecran-question" class="ecran cache">
+          <p id="numero-question"></p>
+          <h2 id="titre-question"></h2>
+          <p id="description-question"></p>
+
+         <div id="liste-reponses"></div>
+
+        <button id="bouton-suivant" class="cache">Question suivante</button>
+
+</section>
 
       <!-- ═══════════════════════════════════════
        ÉCRAN 3 — RÉSULTATS
        Caché au départ. Affiché à la fin du quiz.
   ════════════════════════════════════════ -->
+    <section id="ecran-resultats" class="ecran cache">
+       <h2>Résultats</h2>
+       <p id="score-final"></p>
+       <p id="message-final"></p>
 
-      <section id="ecran-resultats" class="ecran cache"></section>
+  <button id="bouton-rejouer">Rejouer</button>
+</section>
 
     </main>
 
