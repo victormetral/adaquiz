@@ -27,6 +27,8 @@ const listeReponses = document.getElementById("liste-reponses")
 const scoreFinal = document.getElementById("score-final")
 const messageFinal = document.getElementById("message-final")
 
+const footer = document.querySelector("footer")
+
 
 // ── État du quiz ─────────────────────────────
 // Ces variables stockent les données en cours de partie.
@@ -57,8 +59,16 @@ const afficher = (ecran) => {
   ecranAccueil.classList.add('cache')
   ecranQuestion.classList.add('cache')
   ecranResultats.classList.add('cache')
+
   ecran.classList.remove('cache')
-}
+
+  if (ecran === ecranQuestion) {
+    footer.classList.add("cache")
+  } else {
+    footer.classList.remove("cache")
+  }
+} 
+
 
 
 // ════════════════════════════════════════════
@@ -174,3 +184,8 @@ boutonSuivant.addEventListener("click", () => {
   }
 })
 
+boutonRejouer.addEventListener("click", () => {
+  indexCourant = 0
+  score = 0
+  afficher(ecranAccueil)
+})
