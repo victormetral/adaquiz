@@ -4,57 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdaQuiz</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta
+      name="description"
+      content="Projet AdaQuiz -Curiosités et culture du monde de la technologie"
+    />
   </head>
 
   <body>
+    <header>
+      <h1>Ada-Quiz</h1>
+    </header>
     <!-- ═══════════════════════════════════════
        ÉCRAN 1 — ACCUEIL
        Affiché au départ. Caché quand on clique sur "Commencer".
   ════════════════════════════════════════ -->
+    <main>
+      <section id="ecran-accueil" class="ecran">
+        <h2>Bienvenue sur le projet AdaQuiz!</h2>
+        <p>
+          Vous pourrez ici accéder à un test visant à évaluer vos connaissances
+          du monde de la technologie. Rassurez-vous, il n'y a pas trop de
+          questions et le niveau de difficulté n'est pas très élevé.
+        </p>
+        <p>
+          Lorsque vous vous sentirez prêt(e), il vous suffira d'appuyer sur le
+          bouton « Démarrer le test » et de saisir votre nom et votre campus
+          pour commencer.
+        </p>
+        <button id="bouton-commencer">Demarrer le test</button>
+      </section>
 
-    <section id="ecran-accueil" class="ecran">
-      <h1>Adaquiz</h1>
-
-      <p>Curiosités et culture du monde de la technologie</p>
-
-      <button id="bouton-commencer">Commencer</button>
-    </section>
-
-    <!-- ═══════════════════════════════════════
+      <!-- ═══════════════════════════════════════
        ÉCRAN 2 — QUESTION
        Caché au départ. Affiché pendant le quiz.
   ════════════════════════════════════════ -->
+      <section id="ecran-question" class="ecran cache"></section>
 
-    <section id="ecran-question" class="ecran cache">
-      <p id="numero-question">Question 1 / 10</p>
-
-      <h2 id="titre-question">Titre de la question</h2>
-
-      <p id="description-question">Description de la question</p>
-
-      <div id="liste-reponses">
-        <!-- Les réponses seront ajoutées en JavaScript -->
-      </div>
-
-      <button id="bouton-suivant" class="cache">Question suivante</button>
-    </section>
-
-    <!-- ═══════════════════════════════════════
+      <!-- ═══════════════════════════════════════
        ÉCRAN 3 — RÉSULTATS
        Caché au départ. Affiché à la fin du quiz.
   ════════════════════════════════════════ -->
+      <section id="ecran-resultats" class="ecran cache"></section>
 
-    <section id="ecran-resultats" class="ecran cache">
-      <h2>Résultats</h2>
-
-      <p id="score-final">0 / 10</p>
-
-      <p id="message-final">Message de fin</p>
-
-      <button id="bouton-rejouer">Rejouer</button>
-    </section>
-
-    <script src="script.js" defer></script>
+      <script src="./script.js" defer></script>
+    </main>
+    <footer>
+      <p>membres de l'équipe AdaQuiz</p>
+      <p>Yocswar Perez</p>
+      <a href="https://github.com/yocswar" target="_blank"></a>
+      <p>Victor Metral</p>
+      <a href="https://github.com/victormetral" target="_blank"></a>
+    </footer>
   </body>
 </html>
