@@ -58,14 +58,14 @@ main {
   padding: 0.3rem 0.5rem;
 }
 #numero-question {
-  display: inclined-block;
+  display: inline-block;
   align-self: flex-start;
   color: #4160ee;
   background-color: #dfdfdf;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px #0001;
-  font-weight: blod;
+  font-weight: bold;
 }
 #liste-reponses {
   display: flex;
@@ -139,7 +139,7 @@ footer {
   gap: 1rem;
   align-items: center;
 }
-.liste-members span {
+.liste-membres span {
   font-weight: bold;
 }
 footer a {
