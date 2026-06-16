@@ -115,7 +115,6 @@ footer {
   padding: 1rem 2rem;
   background-color: #621ab860;
 }
-<<<<<<< HEAD
 
 .correct {
   color: green;
@@ -128,7 +127,6 @@ footer {
   font-weight: bold;
   margin-top: 1rem;
 }
-=======
 .liste-membres {
   list-style: none;
   margin: 0.5rem;
@@ -151,4 +149,3 @@ footer a {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
->>>>>>> fea28d98bbd7b45d38626874aff075dca5313cc0
