@@ -21,6 +21,7 @@ const numeroQuestion = document.getElementById("numero-question");
 const titreQuestion = document.getElementById("titre-question");
 const descriptionQuestion = document.getElementById("description-question");
 const listeReponses = document.getElementById("liste-reponses");
+const messageReponse = document.getElementById("message-reponse");
 
 const scoreFinal = document.getElementById("score-final");
 const messageFinal = document.getElementById("message-final");
@@ -90,6 +91,8 @@ const afficherQuestion = () => {
 
   listeReponses.innerHTML = "";
   boutonSuivant.classList.add("cache");
+  messageReponse.textContent = "";
+  messageReponse.className = "message-reponse";
   question.answers.forEach((reponse, index) => {
     const bouton = document.createElement("button");
 
@@ -134,6 +137,11 @@ const verifierReponse = (indexChoisi) => {
 
   if (indexChoisi === question.correctAnswer) {
     score++;
+    messageReponse.textContent = "Bonne réponse !";
+    messageReponse.classList.add("correcte");
+  } else {
+    messageReponse.textContent = "Mauvaise réponse.";
+    messageReponse.classList.add("incorrecte");
   }
 
   boutonSuivant.classList.remove("cache");

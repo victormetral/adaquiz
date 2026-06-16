@@ -72,6 +72,18 @@ main {
   flex-direction: column;
   gap: 0.5rem;
 }
+.message-reponse {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.message-reponse.correcte {
+  color: #60d080;
+}
+
+.message-reponse.incorrecte {
+  color: #b01020;
+}
 .bouton {
   display: inline-block;
   background-color: #4160ee;
