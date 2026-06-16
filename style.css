@@ -72,6 +72,18 @@ main {
   flex-direction: column;
   gap: 0.5rem;
 }
+.message-reponse {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.message-reponse.correcte {
+  color: #60d080;
+}
+
+.message-reponse.incorrecte {
+  color: #b01020;
+}
 .bouton {
   display: inline-block;
   background-color: #4160ee;
@@ -114,18 +126,6 @@ main {
 footer {
   padding: 1rem 2rem;
   background-color: #621ab860;
-}
-
-.correct {
-  color: green;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.incorrect {
-  color: red;
-  font-weight: bold;
-  margin-top: 1rem;
 }
 .liste-membres {
   list-style: none;
