@@ -13,7 +13,7 @@ header {
   background-color: #621ab8;
   padding: 1rem 2rem;
 }
-#titre {
+#titre-page {
   display: inline-block;
   color: #621a77;
   background-color: #dfdfdf;
@@ -24,6 +24,7 @@ header {
 }
 main {
   flex: 1;
+  width: 100%;
   padding: 2rem;
   margin: 0 auto;
   max-width: 800px;
@@ -35,8 +36,9 @@ main {
   box-shadow: 0 4px 12px #0002;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
-#subtitre {
+.subtitre {
   display: inline-block;
   color: #4160ee;
   background-color: #efefef;
@@ -45,12 +47,32 @@ main {
   border-radius: 1rem;
   box-shadow: 0 4px 12px #0001;
   max-width: 900px;
-  margin-bottom: 0.5rem;
 }
-.card p {
+.contenu-carte {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contenu-carte p {
   padding: 0.3rem 0.5rem;
 }
-#bouton-commencer {
+#numero-question {
+  display: inclined-block;
+  align-self: flex-start;
+  color: #4160ee;
+  background-color: #dfdfdf;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px #0001;
+  font-weight: blod;
+}
+#liste-reponses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.bouton {
   display: inline-block;
   background-color: #4160ee;
   color: #efefef;
@@ -59,7 +81,31 @@ main {
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px #0003;
   border: none;
+  cursor: pointer;
+}
+#bouton-commencer,
+#bouton-suivant,
+#bouton-rejouer {
   align-self: flex-end;
+}
+.bouton-reponse {
+  background-color: #dfdfdf;
+  color: #4160ee;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px #0003;
+  border: none;
+  cursor: pointer;
+}
+.bouton-reponse.correcte {
+  background-color: #60d080;
+}
+.bouton-reponse.incorrecte {
+  background-color: #b01020;
+}
+.bouton-reponse:disabled {
+  cursor: not-allowed;
 }
 /* La classe .cache masque un écran */
 .cache {
@@ -69,6 +115,7 @@ footer {
   padding: 1rem 2rem;
   background-color: #621ab860;
 }
+<<<<<<< HEAD
 
 .correct {
   color: green;
@@ -81,3 +128,27 @@ footer {
   font-weight: bold;
   margin-top: 1rem;
 }
+=======
+.liste-membres {
+  list-style: none;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.liste-membres li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.liste-members span {
+  font-weight: bold;
+}
+footer a {
+  text-decoration: none;
+  color: #ccaa11;
+  background-color: #dfdfdf;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+>>>>>>> fea28d98bbd7b45d38626874aff075dca5313cc0
