@@ -69,3 +69,15 @@ footer {
   padding: 1rem 2rem;
   background-color: #621ab860;
 }
+
+.correct {
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+  margin-top: 1rem;
+}

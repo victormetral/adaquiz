@@ -22,7 +22,9 @@ const boutonRejouer = document.getElementById("bouton-rejouer")
 const numeroQuestion = document.getElementById("numero-question")
 const titreQuestion = document.getElementById("titre-question")
 const descriptionQuestion = document.getElementById("description-question")
+
 const listeReponses = document.getElementById("liste-reponses")
+const messageReponse = document.getElementById("message-reponse")
 
 const scoreFinal = document.getElementById("score-final")
 const messageFinal = document.getElementById("message-final")
@@ -99,6 +101,8 @@ const afficher = (ecran) => {
   descriptionQuestion.textContent = question.description
 
   listeReponses.innerHTML = ""
+  messageReponse.textContent = ""
+  messageReponse.className = ""
   boutonSuivant.classList.add("cache")
   question.answers.forEach((reponse, index) => {
   const bouton = document.createElement("button")
@@ -131,14 +135,17 @@ const afficher = (ecran) => {
 const verifierReponse = (indexChoisi) => {
   const question = questions[indexCourant]
 
-if (indexChoisi === question.correctAnswer) {
-  score++
-  console.log(score)
-}
-boutonSuivant.classList.remove("cache")
-}
+  if (indexChoisi === question.correctAnswer) {
+    score++
+    messageReponse.textContent = "Bonne réponse !"
+    messageReponse.className = "correct"
+  } else {
+    messageReponse.textContent = "Mauvaise réponse."
+    messageReponse.className = "incorrect"
+  }
 
-
+  boutonSuivant.classList.remove("cache")
+}
 
 // ── TODO : afficherResultats ─────────────────
 // Cette fonction est appelée quand toutes les questions ont été répondues.
