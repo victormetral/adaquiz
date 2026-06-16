@@ -19,12 +19,8 @@ const boutonRejouer = document.getElementById("bouton-rejouer");
 
 const numeroQuestion = document.getElementById("numero-question")
 const titreQuestion = document.getElementById("titre-question")
-const descriptionQuestion = document.getElementById("description-question")
 
-const listeReponses = document.getElementById("liste-reponses")
 const messageReponse = document.getElementById("message-reponse")
-const numeroQuestion = document.getElementById("numero-question");
-const titreQuestion = document.getElementById("titre-question");
 const descriptionQuestion = document.getElementById("description-question");
 const listeReponses = document.getElementById("liste-reponses");
 
@@ -130,8 +126,20 @@ const afficherQuestion = () => {
 //   6. Afficher le bouton "Question suivante"
 
 const verifierReponse = (indexChoisi) => {
-  const question = questions[indexCourant];
-  const boutonsReponse = listeReponses.querySelectorAll(".bouton-reponse");
+  const question = questions[indexCourant]
+  const boutonsReponse = listeReponses.querySelectorAll(".bouton-reponse")
+
+  boutonsReponse.forEach((bouton, index) => {
+    bouton.disabled = true
+
+    if (index === question.correctAnswer) {
+      bouton.classList.add("correcte")
+    }
+
+    if (index === indexChoisi && indexChoisi !== question.correctAnswer) {
+      bouton.classList.add("incorrecte")
+    }
+  })
 
   if (indexChoisi === question.correctAnswer) {
     score++
@@ -144,24 +152,6 @@ const verifierReponse = (indexChoisi) => {
 
   boutonSuivant.classList.remove("cache")
 }
-  boutonsReponse.forEach((bouton, index) => {
-    bouton.disabled = true;
-
-    if (index === question.correctAnswer) {
-      bouton.classList.add("correcte");
-    }
-
-    if (index === indexChoisi && indexChoisi !== question.correctAnswer) {
-      bouton.classList.add("incorrecte");
-    }
-  });
-
-  if (indexChoisi === question.correctAnswer) {
-    score++;
-  }
-
-  boutonSuivant.classList.remove("cache");
-};
 
 // ── TODO : afficherResultats ─────────────────
 // Cette fonction est appelée quand toutes les questions ont été répondues.
