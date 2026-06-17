@@ -28,6 +28,8 @@ const messageFinal = document.getElementById("message-final");
 
 const footer = document.querySelector("footer");
 
+const progression = document.getElementById("progression");
+
 // ── État du quiz ─────────────────────────────
 // Ces variables stockent les données en cours de partie.
 // Tu n'as pas besoin de les modifier.
@@ -86,8 +88,12 @@ const afficherQuestion = () => {
 
   numeroQuestion.textContent = `Question ${indexCourant + 1} / ${questions.length}`;
 
+  const pourcentageProgression = ((indexCourant + 1) / questions.length) * 100;
+   progression.style.width = `${pourcentageProgression}%`;
+
   titreQuestion.textContent = question.title;
   descriptionQuestion.textContent = question.description;
+  
 
   listeReponses.innerHTML = "";
   boutonSuivant.classList.add("cache");
