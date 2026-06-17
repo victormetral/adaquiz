@@ -1,31 +1,39 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/rLo6X3-f)
+# AdaQuiz
 
-# AdaQuiz — Projet de départ
+## Thème
 
-Bienvenue sur le projet de départ AdaQuiz ! Ce repo contient la structure de base du quiz. À vous de le compléter.
+Curiosités et culture du monde de la technologie.
 
-## Ce qui est déjà fait
+## Membres du binôme
 
-- `index.html` — la structure de base avec les 3 sections à compléter
-- `style.css` — uniquement la classe .cache (permettant de cacher des écrans dynamiquement grâce au JS)
-- `script.js` — le chargement du JSON et la navigation entre écrans
+- Victor Metral
+- Yocswar Perez
 
-## Ce que vous devez faire
+## Description
 
-1. **Compléter `index.html` et `style.css`** pour créer le squelette du site, sans JavaScript
-2. **Compléter `questions.json`** avec au moins 5 questions (voir le brief pour le format)
-3. **Compléter les fonctions** marquées `TODO` dans `script.js` :
-   - `afficherQuestion()`
-   - `verifierReponse(indexChoisi)`
-   - `afficherResultats()`
-   - Les écouteurs d'événements en bas du fichier
+AdaQuiz est un quiz interactif développé en HTML, CSS et JavaScript.
+
+Le quiz affiche des questions à choix multiples, vérifie la réponse choisie, affiche si elle est correcte ou incorrecte, puis calcule un score final.
+
+Les questions sont stockées dans le fichier `questions.json` et chargées dynamiquement avec JavaScript.
+
+## Fonctionnalités
+
+- Écran d’accueil
+- Écran question
+- Écran résultats
+- Chargement des questions depuis `questions.json`
+- Affichage dynamique des réponses
+- Vérification de la bonne réponse
+- Score final
+- Bouton Rejouer
 
 ## Lancer le projet en local
+
+Le fichier JSON doit être chargé avec un serveur local.
+
+Dans le terminal :
 
 ```bash
 npx live-server
 ```
-
-Ouvrir ensuite `http://localhost:8080`.
-
-> ⚠️ Ne pas ouvrir `index.html` directement dans le navigateur — `fetch` ne fonctionne pas sans serveur local.
