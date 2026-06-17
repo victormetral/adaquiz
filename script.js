@@ -164,10 +164,16 @@ const verifierReponse = (indexChoisi) => {
 const afficherResultats = () => {
   scoreFinal.textContent = `${score} / ${questions.length}`;
 
-  if (score >= questions.length / 2) {
-    messageFinal.textContent = "Bravo !";
+  const pourcentageScore = (score / questions.length) * 100;
+
+  if (pourcentageScore === 100) {
+    messageFinal.textContent = "🏆 Excellent ! Score parfait.";
+  } else if (pourcentageScore >= 70) {
+    messageFinal.textContent = "🔥 Très bien joué ! Tu maîtrises le sujet.";
+  } else if (pourcentageScore >= 50) {
+    messageFinal.textContent = "👍 Bien joué ! Tu peux encore progresser.";
   } else {
-    messageFinal.textContent = "Tu peux faire mieux.";
+    messageFinal.textContent = "📚 Continue à t'entraîner, tu vas progresser.";
   }
 
   afficher(ecranResultats);
