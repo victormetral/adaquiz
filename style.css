@@ -162,3 +162,67 @@ footer a {
   background-color: #60d080;
   border-radius: 999rem;
 }
+/* ═══════════════════════════════
+   ÉCRAN RÉSULTAT
+═══════════════════════════════ */
+
+.carte-resultat {
+  text-align: center;
+  animation: apparitionResultat 0.8s ease;
+}
+
+.emoji-resultat {
+  font-size: 5rem;
+  animation: rebond 1.5s infinite;
+}
+
+.score-final {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #4160ee;
+  margin: 1rem 0;
+}
+
+.message-final {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.bouton-rejouer {
+  align-self: center !important;
+}
+
+.bouton-rejouer:hover {
+  transform: scale(1.08);
+  transition: 0.3s;
+}
+
+/* Animation d'arrivée */
+
+@keyframes apparitionResultat {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation du trophée */
+
+@keyframes rebond {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
