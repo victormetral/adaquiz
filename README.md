@@ -1,39 +1,57 @@
 # AdaQuiz
 
-## Thème
+Quiz interactif sur la technologie développé en HTML, CSS et JavaScript.
 
-Curiosités et culture du monde de la technologie.
+## Démo en ligne
 
-## Membres du binôme
+https://victormetral.github.io/adaquiz/
 
-- Victor Metral
-- Yocswar Perez
+## À propos du projet
 
-## Description
+AdaQuiz est une application web permettant de tester ses connaissances sur l'histoire de l'informatique et les technologies numériques.
 
-AdaQuiz est un quiz interactif développé en HTML, CSS et JavaScript.
-
-Le quiz affiche des questions à choix multiples, vérifie la réponse choisie, affiche si elle est correcte ou incorrecte, puis calcule un score final.
-
-Les questions sont stockées dans le fichier `questions.json` et chargées dynamiquement avec JavaScript.
+Les questions sont stockées dans un fichier JSON et chargées dynamiquement avec JavaScript. Le score est calculé automatiquement et affiché à la fin du quiz.
 
 ## Fonctionnalités
 
-- Écran d’accueil
-- Écran question
-- Écran résultats
-- Chargement des questions depuis `questions.json`
-- Affichage dynamique des réponses
-- Vérification de la bonne réponse
-- Score final
-- Bouton Rejouer
+* Écran d'accueil
+* Questions à choix multiples
+* Chargement dynamique des questions depuis un fichier JSON
+* Vérification des réponses
+* Calcul du score final
+* Écran de résultats personnalisé
+* Bouton pour rejouer
+* Barre de progression
 
-## Lancer le projet en local
+## Technologies utilisées
 
-Le fichier JSON doit être chargé avec un serveur local.
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* JSON
 
-Dans le terminal :
+## Installation
+
+Cloner le dépôt :
+
+```bash
+git clone https://github.com/victormetral/adaquiz.git
+```
+
+Se placer dans le dossier :
+
+```bash
+cd adaquiz
+```
+
+Lancer un serveur local :
 
 ```bash
 npx live-server
 ```
+
+## Auteur
+
+Victor Metral
+
+Formation Développeur Web — Ada Tech School
