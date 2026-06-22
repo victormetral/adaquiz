@@ -6,6 +6,10 @@ Quiz interactif sur la technologie développé en HTML, CSS et JavaScript.
 
 https://victormetral.github.io/adaquiz/
 
+## Aperçu
+
+![AdaQuiz](images/adaquiz-home.png)
+
 ## À propos du projet
 
 AdaQuiz est une application web permettant de tester ses connaissances sur l'histoire de l'informatique et les technologies numériques.
